@@ -41,8 +41,13 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'rest_framework',
+    'webpack_loader',
+    'taggit',
+    'taggit_serializer',
 
     'authentication',
+    'news',
+    'events',
 ]
 
 MIDDLEWARE = [
@@ -130,9 +135,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-server', 'static')
-
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-server', 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # rest API settings
 
@@ -153,6 +157,7 @@ REST_FRAMEWORK = {
     ),
     'SEARCH_PARAM': 'q',
     'ORDERING_PARAM': 'ordering',
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
 
 JWT_AUTH = {
@@ -184,7 +189,8 @@ JWT_AUTH = {
 CORS_URLS_REGEX = r'^/api/.*$'
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
-    'http://127.0.0.1'
+    'http://127.0.0.1',
+    'http://localhost:8100'
 )
 
 from corsheaders.defaults import default_headers
@@ -192,3 +198,17 @@ from corsheaders.defaults import default_headers
 CORS_ALLOW_HEADERS = default_headers + (
     'X-CSRFToken',
 )
+
+# Mail settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Custom Webpack
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': os.path.join(BASE_DIR, 'ionic'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
