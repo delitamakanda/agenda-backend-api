@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include_docs_urls(title='agenda API')),
     url(r'^api/auth/', include('authentication.api.urls', namespace='api-auth')),
+    url(r'^api/events/', include('events.api.urls', namespace='api-events')),
+    url(r'^api/news/', include('news.api.urls', namespace='api-news')),
 ]
 
 if settings.DEBUG:
