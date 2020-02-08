@@ -130,3 +130,5 @@ dmypy.json
 
 /agenda
 .vscode
+static/ionic/
+.DS_Store
