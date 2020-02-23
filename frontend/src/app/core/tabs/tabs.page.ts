@@ -32,7 +32,7 @@ export class TabsPage implements OnInit {
       {
         icon: 'time',
         label: 'Agenda',
-        url: 'tab3'
+        url: 'agenda'
       },
       {
         icon: 'pin',

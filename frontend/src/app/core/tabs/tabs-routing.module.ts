@@ -28,12 +28,12 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'agenda',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../../pages/tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../../pages/agenda/agenda.module').then(m => m.AgendaPageModule)
           }
         ]
       },
