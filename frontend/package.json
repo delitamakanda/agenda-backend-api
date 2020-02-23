@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "gh-pages": "ng build --base-href 'https://delitamakanda.github.io/agenda/' --prod && npx ngh --dir=www/"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +46,7 @@
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "~13.7.0",
     "angular-cli-builders": "^2.1.2",
+    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.2.1",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
