@@ -1,4 +1,10 @@
 {
-    "Hello": "Hello",
-    "Good Morning": "Good Morning"
-   }
+    "home": {
+        "Hello": "Hello",
+        "Good Morning": "Good Morning"
+    },
+    "alert": {
+        "header": "Error",
+        "msg": "There is a problem with this operation"
+    }
+}

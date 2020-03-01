@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { VenuePageRoutingModule } from './venue-routing.module';
 
 import { VenuePage } from './venue.page';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VenuePageRoutingModule
+    VenuePageRoutingModule,
+    SharedModule
   ],
   declarations: [VenuePage]
 })
