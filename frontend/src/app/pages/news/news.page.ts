@@ -10,7 +10,7 @@ export class NewsPage {
   constructor() {}
 
   errorImage(evt: any) {
-    evt.target.src = './../../assets/images/image-news.jpeg'
+    evt.target.src = './assets/images/image-news.jpeg'
   }
 
 }
