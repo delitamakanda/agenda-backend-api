@@ -22,12 +22,12 @@ export class TabsPage implements OnInit {
       {
         icon: 'paper',
         label: 'News',
-        url: 'tab1'
+        url: 'news'
       },
       {
         icon: 'information-circle-outline',
         label: 'Info',
-        url: 'tab2'
+        url: 'info'
       },
       {
         icon: 'time',
