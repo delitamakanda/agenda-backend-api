@@ -1,7 +1,7 @@
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AgendaPage } from './agenda.page';
 
@@ -12,6 +12,7 @@ import { AgendaPage } from './agenda.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: AgendaPage }])
   ],
+  providers: [DatePipe],
   declarations: [AgendaPage]
 })
 export class AgendaPageModule {}
