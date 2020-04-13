@@ -33,7 +33,7 @@ class AuthAPIView(views.APIView):
                 user = user_obj
                 payload = jwt_payload_handler(user)
                 token = jwt_encode_handler(payload)
-                response = jwt_response_payload_handler(token, user, request=request)
+                response = jwt_response_payload_handler(token, request=request)
                 return Response(response)
         return Response({"detail": "Invalid credentials"}, status=401)
 
