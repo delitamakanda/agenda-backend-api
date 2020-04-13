@@ -1,3 +1,3 @@
 # agenda
 
-![agenda](https://github.com/delitamakanda/agenda/workflows/agenda/badge.svg?branch=master)
+![agenda](https://github.com/delitamakanda/agenda-backend-api/workflows/agenda/badge.svg?branch=master)
