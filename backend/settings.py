@@ -192,7 +192,8 @@ CORS_URLS_REGEX = r'^/api/.*$'
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
     'http://127.0.0.1',
-    'http://localhost:8100'
+    'http://localhost:8100',
+    'https://delitamakanda.github.io/',
 )
 
 from corsheaders.defaults import default_headers
