@@ -12,19 +12,20 @@ DEBUG = os.environ.get('DEBUG')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+SERVER_EMAIL = os.environ.get('ADMIN_EMAIL')
+ADMIN_NAME = os.environ.get('ADMIN_NAME')
+
 ADMINS = (
-    ('Délita', 'delita.makanda@gmail.com'),
+    (ADMIN_NAME, SERVER_EMAIL),
 )
 
 SEND_BROKEN_LINK_EMAILS=True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
-
-SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
+EMAIL_HOST = os.environ.get('SENDGRID_SERVER')
+EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
+EMAIL_PORT = os.environ.get('SENDGRID_PORT')
+EMAIL_USE_TLS = True
 
