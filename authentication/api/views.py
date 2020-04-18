@@ -41,7 +41,7 @@ class AuthAPIView(views.APIView):
 class RegisterAPIView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserRegisterSerializer
-    permission_classes = (AnonPermissionOnly,)
+    permission_classes = [AnonPermissionOnly]
 
     def get_serializer_context(self, *args, **kwargs):
         return {"request": self.request}
