@@ -196,11 +196,11 @@ CORS_ORIGIN_WHITELIST = (
     'https://delitamakanda.github.io/',
 )
 
-from corsheaders.defaults import default_headers
+# from corsheaders.defaults import default_headers
 
-CORS_ALLOW_HEADERS = default_headers + (
-    'X-CSRFToken',
-)
+# CORS_ALLOW_HEADERS = default_headers + (
+    # 'X-CSRFToken',
+# )
 
 # Mail settings
 
